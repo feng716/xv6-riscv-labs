@@ -16,7 +16,7 @@ int main(){
         //fprintf(1,"par:child %d has been done\n",&pid);
         char result[2];
         read(pipe_rec[0],result,5);
-        fprintf(1,"%d: received %s\n",pipe_rec,result);
+        fprintf(1,"%d: received %s\n",*pipe_rec,result);
         exit(0);
     }
     else if (pid==0) {
@@ -24,7 +24,7 @@ int main(){
         close(pipe_rec[0]);
         char result[2];
         read(pipe_send[0],result,5);
-        fprintf(1,"%d: received %s\n",pipe_send+1,result);
+        fprintf(1,"%d: received %s\n",*(pipe_send+1),result);
         write(pipe_rec[1],"pong",5);
         //fprintf(1,"c:pingpong has been sent to father \n",&pid);
         exit(0);

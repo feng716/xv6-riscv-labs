@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch xv6(GDBDebug)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/kernel/kernel",
+            "stopAtEntry": false,
+            "cwd":"${workspaceFolder}",
+            "miDebuggerServerAddress": "127.0.0.1:26000",
+            "miDebuggerPath": "/usr/bin/gdb-multiarch",
+            "MIMode": "gdb",
+            "preLaunchTask": "xv6-build"
+        }
+    ]
+}
