@@ -22,6 +22,7 @@ int main() {
         write(topip[1], &temp, 4);
       }
     }
+    close(topip[1]);
     close(pip[0]);
     pipe(pip);
     fprintf(1,"1done\n");
@@ -29,7 +30,7 @@ int main() {
     if (pid == 0) {
       //status=1;
       fprintf(1,"fork successfully\n");
-      close(topip[1]);
+      
       while (read(topip[0], &temp, 4)) {
         write(pip[1], &temp, 4); // copy frome topip to pip;
         fprintf(1,"writing..");
