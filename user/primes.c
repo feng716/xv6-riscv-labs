@@ -11,7 +11,7 @@ int main() {
   // for each PIPE
   while (min_prime != 31) {
     read(pip[0], &min_prime, 4);
-    fprintf(1, "prime:%d\n", min_prime);
+    fprintf(1, "prime %d\n", min_prime);
 
     int topip[2];
     pipe(topip);
