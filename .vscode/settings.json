@@ -1,7 +1,6 @@
 {
     "clangd.fallbackFlags": [
         "-I.",
-        "-I..",
-        "-I/usr/risv64-linux-gnu/include"
+        "-I.."
     ]
 }
