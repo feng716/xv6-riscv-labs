@@ -153,6 +153,7 @@ UPROGS=\
 	$U/_pingpong\
 	$U/_primes\
 	$U/_test\
+	$U/_find\
 
 ifeq ($(LAB),syscall)
 UPROGS += \
@@ -306,3 +307,5 @@ myapi.key:
 
 
 .PHONY: handin tarball tarball-pref clean grade handin-check
+
+clean-make:clean qemu
